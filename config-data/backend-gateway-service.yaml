@@ -17,15 +17,11 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: student-service
-          uri: lb://student-service
+        - id: backend-estudiantes-service
+          uri: lb://backend-estudiantes-service
           predicates:
-            - Path=/student/**
-        - id: installment-service
-          uri: lb://installment-service
+            - Path=/estudiante/**
+        - id: backend-cuotas-service
+          uri: lb://backend-cuotas-service
           predicates:
-            - Path=/installment/**
-        - id: exam-service
-          uri: lb://exam-service
-          predicates:
-            - Path=/exam/**
+            - Path=/cuotas/**
